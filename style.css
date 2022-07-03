@@ -1,0 +1,39 @@
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    margin: 12px auto;
+}
+
+#newsBox {
+    margin: 16px auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #F8F9FA;
+    padding: 22px;
+}
+
+.newsCard {
+    width: 50vw;
+    margin: 7px;
+}
+
+#img {
+    height: 406px;
+    width: 721px;
+}
+
+.line {
+    width: 30vw;
+    border: 1px solid black;
+    margin: 7px;
+    background-color: black;
+    height: 4px;
+    border-radius: 24px;
+}
