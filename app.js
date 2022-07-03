@@ -17,11 +17,10 @@ xhr.onload = function () {
         let newsHTML = "";
         for (key in articles) {
 
-            let currentDate = function getCurrentDate() {
+            function getCurrentDate() {
                 let dateString = `${articles[key].publishedAt}`;
                 dateString = dateString.slice(0, 10);
-                let date = new Date(`${dateString.slice(8, 10)} / ${dateString.slice(5, 7)} / ${dateString.slice(0, 4)}`);
-                console.log(date);
+                return `${dateString.slice(8, 10)} / ${dateString.slice(5, 7)} / ${dateString.slice(0, 4)}`;
             }
             let news = `<div class="newsCard card">
                             <img src="${articles[key].urlToImage}"
@@ -32,7 +31,7 @@ xhr.onload = function () {
                                 <p class="card-text">${articles[key].content}</p>
                                 <a target="_blank" href="${articles[key].url}" class="btn btn-primary">Read more..</a>
                             </div>
-                           <div class="card-footer text-muted">${currentDate}</div>
+                           <div class="text-center card-footer text-muted">${getCurrentDate()}</div>
                         </div>`;
             newsHTML += news;
         }

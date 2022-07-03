@@ -1,5 +1,4 @@
-
-.head{
+.head {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +19,7 @@
 }
 
 .newsCard {
-    width: 50vw;
+    width: 33vw;
     margin: 7px;
 }
 
