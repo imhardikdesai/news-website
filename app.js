@@ -1,5 +1,6 @@
 let newsBox = document.getElementById('newsBox');
 
+// Create XML Object
 const xhr = new XMLHttpRequest();
 
 let key = "5ee41684e9124d3382b0e5416bb89437";
@@ -9,12 +10,15 @@ xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=$
 xhr.getResponseHeader('Content-type', 'application/json');
 
 xhr.onload = function () {
+    // status code 200 is For "OK"
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
 
-        let articles = json.articles;
+        let articles = json.articles;  // Get Articles Oblect
         console.log(articles);
         let newsHTML = "";
+
+        //Applying Loop on articles to get inner elements
         for (key in articles) {
 
             function getCurrentDate() {
@@ -35,6 +39,7 @@ xhr.onload = function () {
                         </div>`;
             newsHTML += news;
         }
+        // Manuplating DOM
         newsBox.innerHTML = newsHTML;
     }
     else {
@@ -42,7 +47,7 @@ xhr.onload = function () {
     }
 }
 
-xhr.send();
+xhr.send();  // This is important to run whole code
 
 
 
