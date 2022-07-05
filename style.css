@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     background-color: #F8F9FA;
     padding: 22px;
+    visibility: hidden;
 }
 
 .newsCard {

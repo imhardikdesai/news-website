@@ -22,7 +22,9 @@ xhr.onload = function () {
         function showSpinner() {
             setTimeout(() => {
                 spinner.style.visibility = 'hidden';
-            }, 600);
+                newsBox.style.visibility = 'visible';
+                
+            }, 700);
         }
 
         xhr.onprogress = showSpinner();
