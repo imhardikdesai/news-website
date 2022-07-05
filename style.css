@@ -36,3 +36,20 @@
     height: 4px;
     border-radius: 24px;
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.mySpin {
+    margin: 50px auto;
+    display: block;
+    height: 10vh;
+    ;
+    width: 10vh;
+    ;
+    visibility: visible;
+}

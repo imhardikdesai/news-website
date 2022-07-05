@@ -1,4 +1,5 @@
 let newsBox = document.getElementById('newsBox');
+let spinner = document.getElementById('spinner');
 
 // Create XML Object
 const xhr = new XMLHttpRequest();
@@ -8,13 +9,23 @@ xhr.open('GET', "https://inshorts.deta.dev/news?category=national", true);
 
 // xhr.getResponseHeader('Content-type', 'application/json');
 
+
+
 xhr.onload = function () {
     // status code 200 is For "OK"
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
         let data = json.data;  // Get data Oblect
-        console.log(data);
+        // console.log(data);
         let newsHTML = "";
+
+        function showSpinner() {
+            setTimeout(() => {
+                spinner.style.visibility = 'hidden';
+            }, 600);
+        }
+
+        xhr.onprogress = showSpinner();
 
         //Applying Loop on data to get inner elements
         for (key in data) {
