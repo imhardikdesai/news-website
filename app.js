@@ -7,7 +7,7 @@ const xhr = new XMLHttpRequest();
 
 xhr.open('GET', "https://inshorts.deta.dev/news?category=national", true);
 
-// xhr.getResponseHeader('Content-type', 'application/json');
+xhr.getResponseHeader('Content-type', 'application/json');
 
 
 
