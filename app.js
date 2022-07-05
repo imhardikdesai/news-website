@@ -19,11 +19,6 @@ xhr.onload = function () {
         //Applying Loop on data to get inner elements
         for (key in data) {
 
-            // function getCurrentDate() {
-            //     let dateString = `${data[key].publishedAt}`;
-            //     dateString = dateString.slice(0, 10);
-            //     return `${dateString.slice(8, 10)} / ${dateString.slice(5, 7)} / ${dateString.slice(0, 4)}`;
-            // }
             let news = `<div class="newsCard card">
                             <img src="${data[key].imageUrl}"
                                 class="img ard-img-top img-thumbnail" alt="Image">
