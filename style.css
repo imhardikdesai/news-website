@@ -54,3 +54,11 @@ footer {
     ;
     visibility: visible;
 }
+
+/* Media Quries */
+@media only screen and (max-width: 1150px) {
+    .newsCard {
+        width: 83vw;
+        margin: 7px;
+    }
+}

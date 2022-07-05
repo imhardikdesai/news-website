@@ -57,14 +57,12 @@ A News website which gives latest news about India. This website Build using Pla
 
 ## UI of the Website
 
-|![Screenshot (280)](https://user-images.githubusercontent.com/87645745/174732709-8554b268-9152-40ef-83a5-e88a2a971f35.png) | 
+|![Screenshot (280)](https://user-images.githubusercontent.com/87645745/177340164-6b3894e6-01b0-4bec-9472-c56f557f7089.png) | 
 |-
-| Home Page 
-| ![Screenshot (282)](https://user-images.githubusercontent.com/87645745/174732898-1bdad175-5a0d-42ed-8ed8-dcf3b7690a4e.png)
-| Corret Guess
-| ![Screenshot (278)](https://user-images.githubusercontent.com/87645745/174733040-9a1aad76-1996-4fff-a407-07a4877f372b.png)
-| Wrong Guess
-| ![Screenshot (278)](https://user-images.githubusercontent.com/87645745/174733221-56229c8e-84f2-4f14-b90c-a2341cca9ff3.png)
+| Loading Page 
+| ![Screenshot (282)](https://user-images.githubusercontent.com/87645745/177339951-a70101f3-c830-4661-827b-76624c4dec3f.png)
+| Home Page
+| ![Screenshot (278)](https://user-images.githubusercontent.com/87645745/177340746-f666e6a6-becd-49f9-b262-beaed5c3ba43.png)
 | Responsive
 
 <br/>
