@@ -8,9 +8,12 @@
 ![Badge](https://img.shields.io/badge/Version-1.0-green) 
 
 </div>
+<div align="center">
+This is Static news website which fetch live and trending news from API. I have used azure static web app in this project to host.
 
+</div>
 <h3 align="center">
-          Live Project : <a target="_blank" href="https://imhardikdesai.github.io/news-website/">News Website</a>
+          Live Project : <a target="_blank" href="https://ambitious-rock-09e1c9b0f.1.azurestaticapps.net/">https://ambitious-rock-09e1c9b0f.1.azurestaticapps.net/</a>
 </h3>
 <br />
 
@@ -55,6 +58,18 @@ A News website which gives latest news about India. This website Build using Pla
 </pre>
   <br />
 
+## Some of image of my project while doing project:
+
+ Create Static web app 
+![Screenshot (280)](https://user-images.githubusercontent.com/87645745/178142571-42533c3f-94e9-417c-9d50-10af088d9dfe.png) 
+|![Screenshot (280)](https://user-images.githubusercontent.com/87645745/178142572-54ffee0d-7245-4f80-88de-1053586b704c.png) | 
+|-
+| Deploy project
+| ![Screenshot (282)](https://user-images.githubusercontent.com/87645745/178142576-1a76a2d6-b0f8-450d-98e7-561356526847.png)
+| Resource of the project
+| ![Screenshot (278)](https://user-images.githubusercontent.com/87645745/178142579-846a62ac-6fbc-41c8-94cd-2f1e5d7f67ed.png)
+
+<br/>
 ## UI of the Website
 
 |![Screenshot (280)](https://user-images.githubusercontent.com/87645745/177340164-6b3894e6-01b0-4bec-9472-c56f557f7089.png) | 

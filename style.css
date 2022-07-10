@@ -6,6 +6,9 @@
     padding: 12px;
     margin: 12px auto;
 }
+body{
+    background-color: rgb(116, 116, 116);
+}
 
 #newsBox {
     margin: 16px auto 40px auto;
