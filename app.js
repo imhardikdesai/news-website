@@ -5,7 +5,7 @@ let spinner = document.getElementById('spinner');
 const xhr = new XMLHttpRequest();
 
 
-xhr.open('GET', "https://inshorts.deta.dev/news?category=national", true);
+xhr.open('GET', "https://inshorts.deta.dev/news?category=hatke", true);
 
 xhr.getResponseHeader('Content-type', 'application/json');
 
