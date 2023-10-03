@@ -1,3 +1,5 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .head {
     display: flex;
     justify-content: center;
@@ -6,22 +8,81 @@
     padding: 12px;
     margin: 12px auto;
 }
+.card-body{
+    padding: 1rem;
+}
+
+.card-title{
+    color: rgb(248, 65, 14);
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    max-height: 80px; /* 4 lines at 20px per line */
+    white-space: normal;
+    overflow: hidden;
+
+
+}
+.card-text{
+    max-height: 100px; /* 4 lines at 20px per line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  white-space: normal;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+}
+
+
+.card-author{
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    padding-top: 12px;
+    font-size: 12px;
+}
+.card-date{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
 
 #newsBox {
-    margin: 16px auto 40px auto;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+align-items: center;
+    gap: 2rem;
     flex-wrap: wrap;
-    background-color: #F8F9FA;
-    padding: 22px;
-    visibility: hidden;
+
 }
 
 .newsCard {
-    width: 33vw;
-    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.24);
+    height: 450px;
+    width: 360px;
+    border-radius: 9px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.thumnail{
+    width: 100%;
+    height: 100%;
+}
+
+.imageWrapper{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 #img {
@@ -55,10 +116,174 @@ footer {
     visibility: visible;
 }
 
+.card-header{
+    border: none;
+}
+
 /* Media Quries */
-@media only screen and (max-width: 1150px) {
+
+@media only screen and (min-width:844px) and (max-width:1142px){
+   
     .newsCard {
-        width: 83vw;
-        margin: 7px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(128, 128, 128, 0.204);
+        height: 380px;
+        width: 250px;
+        border-radius: 9px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .card-title{
+        color: rgb(248, 65, 14);
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        max-height: 80px; /* 4 lines at 20px per line */
+        white-space: normal;
+        overflow: hidden;
+    
+    
+    }
+    .card-author{
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        padding-top: 12px;
+        font-size: 8px;
+    }
+    .card-text{
+        max-height: 100px; /* 4 lines at 20px per line */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      white-space: normal;
+      font-size: 11px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;  
+    }
+    .imageWrapper{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .card-body{
+        padding: 0.5rem;
+    }
+    
+}
+@media only screen and (min-width:492px) and (max-width:842px){
+
+      
+    .newsCard {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(128, 128, 128, 0.204);
+        height: 360px;
+        width: 230px;
+        border-radius: 9px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .imageWrapper{
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+    }
+    .card-title{
+        color: rgb(248, 65, 14);
+        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        max-height: 80px; /* 4 lines at 20px per line */
+        white-space: normal;
+        overflow: hidden;
+    
+    
+    }
+    .card-text{
+        max-height: 100px; /* 4 lines at 20px per line */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      white-space: normal;
+      font-size: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;  
+    }
+    .card-author{
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        padding-top: 12px;
+        font-size: 8px;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:490px){
+
+      
+    .newsCard {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(128, 128, 128, 0.204);
+        height: 360px;
+        width: 80%;
+        border-radius: 9px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .imageWrapper{
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+    }
+    .card-title{
+        color: rgb(248, 65, 14);
+        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        max-height: 80px; /* 4 lines at 20px per line */
+        white-space: normal;
+        overflow: hidden;
+    
+    
+    }
+    .card-text{
+        max-height: 100px; /* 4 lines at 20px per line */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      white-space: normal;
+      font-size: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;  
+    }
+    .card-author{
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        padding-top: 12px;
+        font-size: 8px;
     }
 }
