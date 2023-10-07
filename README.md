@@ -13,7 +13,7 @@ This is Static news website which fetch live and trending news from API. I have 
 
 </div>
 <h3 align="center">
-          Live Project : <a target="_blank" href="https://ambitious-rock-09e1c9b0f.1.azurestaticapps.net/">https://ambitious-rock-09e1c9b0f.1.azurestaticapps.net/</a>
+          Live Project : <a target="_blank" href="https://news-website-web.vercel.app/">https://news-website-web.vercel.app</a>
 </h3>
 <br />
 
