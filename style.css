@@ -1,6 +1,24 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-.head {
+
+/* Default (Light) Mode */
+:root {
+    --background-color: #ffffff; /* Light background color */
+    --text-color: #333333; /* Dark text color */
+    --card-background: rgba(128, 128, 128, 0.204); /* Card background color */
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    --background-color: #333333; /* Dark background color */
+    --text-color: #ffffff; /* Light text color */
+    --card-background: rgba(0, 0, 0, 0.24); /* Dark card background color */
+  }
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  .head {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +26,8 @@
     padding: 12px;
     margin: 12px auto;
 }
+
+
 .card-body{
     padding: 1rem;
 }
@@ -67,7 +87,7 @@ align-items: center;
 .newsCard {
     display: flex;
     flex-direction: column;
-    background-color: rgba(128, 128, 128, 0.24);
+    background-color: var(--card-background);
     height: 450px;
     width: 360px;
     border-radius: 9px;
@@ -233,6 +253,13 @@ footer {
         font-size: 8px;
     }
 }
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    /* Add dark mode specific styles here */
+}  
 @media only screen and (min-width:400px) and (max-width:490px){
 
       
