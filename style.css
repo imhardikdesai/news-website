@@ -1,6 +1,24 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-.head {
+
+/* Default (Light) Mode */
+:root {
+    --background-color: #ffffff; /* Light background color */
+    --text-color: #333333; /* Dark text color */
+    --card-background: rgba(128, 128, 128, 0.204); /* Card background color */
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    --background-color: #333333; /* Dark background color */
+    --text-color: #ffffff; /* Light text color */
+    --card-background: rgba(0, 0, 0, 0.24); /* Dark card background color */
+  }
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  .head {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +26,8 @@
     padding: 12px;
     margin: 12px auto;
 }
+
+
 .card-body{
     padding: 1rem;
 }
@@ -67,7 +87,7 @@ align-items: center;
 .newsCard {
     display: flex;
     flex-direction: column;
-    background-color: rgba(128, 128, 128, 0.24);
+    background-color: var(--card-background);
     height: 450px;
     width: 360px;
     border-radius: 9px;
@@ -179,6 +199,74 @@ footer {
     }
     
 }
+label {
+    width:50px;
+    height:25px;
+    position: relative;
+    display: block;
+    background: #fffdf3;
+    border-radius: 50px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+  }
+  label:after {
+    content: "";
+    width:23px;
+    height: 23px;
+    position: absolute;
+    top:1px;
+    left:1px;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  input:checked + label {
+    background: #242424;
+  }
+  input:checked + label:after {
+    left: 49px; 
+    transform: translateX(-100%); 
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+  label, label:after {
+    transition: 0.3s
+  }
+  label:active:after{ 
+     width: 30px;
+  }
+  label svg {
+    position: absolute;
+    width: 20px;
+    top: 4.5px;
+    left:2px;
+    z-index: 100;
+  }
+  label svg.sun {
+    opacity: 1;
+    transition: 0.3s;
+  }
+  label svg.moon {
+    opacity: 0.5;
+    left:28px;
+    transition: 0.3s;
+  }
+  input:checked + label svg.sun {
+    opacity: 0.2;
+  }
+  input:checked + label svg.moon {
+     opacity: 1;
+  }
+  .form-switch{
+    padding-left: 0;
+  }
+  .form-check{
+    padding-left: 0;
+  }
 @media only screen and (min-width:492px) and (max-width:842px){
 
       
@@ -233,6 +321,13 @@ footer {
         font-size: 8px;
     }
 }
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    /* Add dark mode specific styles here */
+}  
 @media only screen and (min-width:400px) and (max-width:490px){
 
       
