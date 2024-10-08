@@ -1,6 +1,6 @@
 const darkModeToggle = document.getElementById("darkModeToggle");
 const body = document.body;
-document.getElementById('footerText').innterHTML = `Copyright &copy;${new Date().getFullYear()} &nbsp; Hardik Desai`
+document.getElementById('footerText').innerHTML = `Copyright &copy;${new Date().getFullYear()} &nbsp; Hardik Desai`
 // Function to toggle dark mode based on user preference
 function toggleDarkMode() {
   if (darkModeToggle.checked) {
