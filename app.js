@@ -67,13 +67,6 @@ function getNews(newsCategoryName) {
 
       let newsHTML = "";
 
-      function showSpinner() {
-        spinner.style.visibility = "hidden";
-        newsBox.style.visibility = "visible";
-      }
-
-      xhr.onprogress = showSpinner;
-
       for (key in data) {
         let news = `<div class="newsCard">
         <div class="imageWrapper">
@@ -91,6 +84,9 @@ function getNews(newsCategoryName) {
                         </div>`;
         newsHTML += news;
       }
+
+      spinner.style.visibility = "hidden";
+      newsBox.style.visibility = "visible";
 
       newsBox.innerHTML = newsHTML;
     } else {
