@@ -30,12 +30,13 @@
 
 .card-body{
     padding: 1rem;
+    
 }
 
 .card-title{
     color: rgb(248, 65, 14);
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     text-overflow: ellipsis;
@@ -45,6 +46,7 @@
     max-height: 80px; /* 4 lines at 20px per line */
     white-space: normal;
     overflow: hidden;
+    
 
 
 }
@@ -87,12 +89,22 @@ align-items: center;
 .newsCard {
     display: flex;
     flex-direction: column;
-    background-color: var(--card-background);
+    /* background-color: var(--card-background); */
     height: 450px;
     width: 360px;
     border-radius: 9px;
     overflow: hidden;
     box-sizing: border-box;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.5s;
+}
+.newsCard:hover{
+  transform: scale(1.01);
 }
 .thumnail{
     width: 100%;
