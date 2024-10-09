@@ -26,6 +26,18 @@
     padding: 12px;
     margin: 12px auto;
 }
+/* Dark Mode for Category List */
+body.dark-mode .dropdown-menu {
+  background-color: #242424; /* Dark background */
+ 
+}
+body.dark-mode .dropdown-item{
+  color: #ffffff; /* White text */
+}
+body.dark-mode .dropdown-item:hover{
+  color: #333333; /* text visibility on hover */
+}
+
 
 
 .card-body{
