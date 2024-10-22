@@ -1,6 +1,8 @@
 const darkModeToggle = document.getElementById("darkModeToggle");
 const body = document.body;
-document.getElementById('footerText').innerHTML = `Copyright &copy;${new Date().getFullYear()} &nbsp; Hardik Desai`
+document.getElementById(
+  "footerText"
+).innerHTML = `Copyright &copy;${new Date().getFullYear()} &nbsp; Hardik Desai`;
 // Function to toggle dark mode based on user preference
 function toggleDarkMode() {
   if (darkModeToggle.checked) {
@@ -15,7 +17,9 @@ darkModeToggle.addEventListener("change", toggleDarkMode);
 
 // Function to check and set initial dark mode state based on user preferences
 function setInitialDarkMode() {
-  const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
 
   if (prefersDarkMode) {
     body.classList.add("dark-mode");
@@ -52,33 +56,35 @@ function sendCategory(index) {
 getNews("all");
 
 function getNews(newsCategoryName) {
-  xhr.open(
-    "GET",
-    `https://inshortsapi.vercel.app/news?category=${newsCategoryName}`,
-    true
-  );
+  xhr.open("GET", `https://saurav.tech/NewsAPI/everything/cnn.json`, true);
 
   xhr.getResponseHeader("Content-type", "application/json");
 
   xhr.onload = function () {
     if (this.status === 200) {
       let json = JSON.parse(this.responseText);
-      let data = json.data;
+      let data = json.articles;
 
       let newsHTML = "";
 
       for (key in data) {
         let news = `<div class="newsCard">
         <div class="imageWrapper">
-        <img src="${data[key].imageUrl}"
+        <img src="${data[key].urlToImage}"
         class="thumnail" alt="Image">
             </div>
             <div class="card-body">
-            <div class="card-date">${data[key].date}</div>
+            <div class="card-date">${new Date(
+              data[key].publishedAt
+            ).toDateString()}</div>
                       <h5 class="card-title">${data[key].title}</h5>
-                                <h5 class="card-author">Author: ${data[key].author}</h5>
+                                <h5 class="card-author">Author: ${
+                                  data[key].author
+                                }</h5>
                                 <p class="card-text">${data[key].content}</p>
-                                <a target="_blank" href="${data[key].readMoreUrl}" class="btn btn-primary">Read more..</a>
+                                <a target="_blank" href="${
+                                  data[key].url
+                                }" class="btn btn-primary">Read more..</a>
                             </div>
                            
                         </div>`;
