@@ -55,6 +55,14 @@ function sendCategory(index) {
 }
 getNews("all");
 
+function onImageErr(img) {
+  this.onerror = null;
+  img.src = 'img/ph.webp'
+
+  // Remove if You Want
+  // img.parentElement.parentElement.remove()
+}
+
 function getNews(newsCategoryName) {
   xhr.open("GET", `https://saurav.tech/NewsAPI/everything/cnn.json`, true);
 
@@ -71,20 +79,18 @@ function getNews(newsCategoryName) {
         let news = `<div class="newsCard">
         <div class="imageWrapper">
         <img src="${data[key].urlToImage}"
-        class="thumnail" alt="Image">
+        class="thumnail" alt="Image" onerror="onImageErr(this)">
             </div>
             <div class="card-body">
             <div class="card-date">${new Date(
-              data[key].publishedAt
-            ).toDateString()}</div>
+          data[key].publishedAt
+        ).toDateString()}</div>
                       <h5 class="card-title">${data[key].title}</h5>
-                                <h5 class="card-author">Author: ${
-                                  data[key].author
-                                }</h5>
+                                <h5 class="card-author">Author: ${data[key].author
+          }</h5>
                                 <p class="card-text">${data[key].content}</p>
-                                <a target="_blank" href="${
-                                  data[key].url
-                                }" class="btn btn-primary">Read more..</a>
+                                <a target="_blank" href="${data[key].url
+          }" class="btn btn-primary">Read more..</a>
                             </div>
                            
                         </div>`;
